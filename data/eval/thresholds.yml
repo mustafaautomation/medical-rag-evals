@@ -1,0 +1,14 @@
+# Scores are fractions from 0 to 1. The eval command exits non-zero when a
+# computed metric is below its threshold. Live metrics are applied only when
+# `clinic-rag eval --mode live` actually runs the RAGAS judges.
+offline:
+  string_presence: 0.95
+  non_llm_context_recall: 0.90
+  refusal_correctness: 0.95
+  hit_rate: 0.90
+  mrr: 0.90
+live:
+  faithfulness: 0.70
+  answer_relevancy: 0.70
+  context_precision: 0.70
+  context_recall: 0.70
