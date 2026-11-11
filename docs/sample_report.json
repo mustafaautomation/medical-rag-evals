@@ -1,0 +1,123 @@
+{
+  "judge_scores_included": false,
+  "variants": [
+    {
+      "failed_question_ids": [],
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "non_llm_context_recall": 1.0,
+        "refusal_correctness": 1.0,
+        "string_presence": 1.0
+      },
+      "mode": "offline",
+      "notes": [
+        "Offline metrics were computed locally. No LLM judge scores are included."
+      ],
+      "passed": true,
+      "thresholds": {
+        "hit_rate": 0.9,
+        "mrr": 0.9,
+        "non_llm_context_recall": 0.9,
+        "refusal_correctness": 0.95,
+        "string_presence": 0.95
+      },
+      "variant": "baseline"
+    },
+    {
+      "failed_question_ids": [
+        "q01",
+        "q02",
+        "q03",
+        "q04",
+        "q05",
+        "q06",
+        "q07",
+        "q08",
+        "q09",
+        "q10",
+        "q11",
+        "q12",
+        "q13",
+        "q14",
+        "q15",
+        "q16",
+        "q17",
+        "q18",
+        "q19",
+        "q20",
+        "q21",
+        "q22",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34"
+      ],
+      "metrics": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "non_llm_context_recall": 0.0,
+        "refusal_correctness": 0.9795918367346939,
+        "string_presence": 0.30612244897959184
+      },
+      "mode": "offline",
+      "notes": [
+        "Offline metrics were computed locally. No LLM judge scores are included."
+      ],
+      "passed": false,
+      "thresholds": {
+        "hit_rate": 0.9,
+        "mrr": 0.9,
+        "non_llm_context_recall": 0.9,
+        "refusal_correctness": 0.95,
+        "string_presence": 0.95
+      },
+      "variant": "bad-retriever"
+    },
+    {
+      "failed_question_ids": [
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44",
+        "q45",
+        "q46",
+        "q47",
+        "q48",
+        "q49"
+      ],
+      "metrics": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "non_llm_context_recall": 1.0,
+        "refusal_correctness": 0.7346938775510204,
+        "string_presence": 0.7346938775510204
+      },
+      "mode": "offline",
+      "notes": [
+        "Offline metrics were computed locally. No LLM judge scores are included."
+      ],
+      "passed": false,
+      "thresholds": {
+        "hit_rate": 0.9,
+        "mrr": 0.9,
+        "non_llm_context_recall": 0.9,
+        "refusal_correctness": 0.95,
+        "string_presence": 0.95
+      },
+      "variant": "no-guardrail"
+    }
+  ]
+}

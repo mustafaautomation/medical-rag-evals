@@ -1,0 +1,24 @@
+name: Live eval
+
+on:
+  workflow_dispatch:
+
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+      - run: uv sync --frozen
+      - name: Run RAGAS judges when the OpenAI secret is present
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          CLINIC_RAG_PROVIDER: openai
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "OPENAI_API_KEY secret is not set. Live RAGAS eval was not run."
+            exit 0
+          fi
+          uv run clinic-rag eval --mode live --variant baseline --provider openai
